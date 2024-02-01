@@ -1,9 +1,28 @@
 function range(start, end, step = 1) {
-  // Add code.
+  list = [];
+  if(step === 1) {
+    for(i = start; i <= end; i++){
+      list.push(i);
+    }
+  }
+  else if(step === -1) {
+    for(i = start; i >= end; i--){
+      list.push(i);
+    }
+    console.log("cats")
+  }
+  else [
+    console.log("Use a valid third number")
+  ]
+  return list;
 }
 
 function sum(numbers) {
-  // Add code.
+  result=0;
+  for(number of numbers){
+    result = result + number;
+  }
+  return result;
 }
 
 

@@ -7,16 +7,17 @@ function reverseArray(arr) {
 }
 
 function reverseArrayInPlace(arr) {
-  // for(arrItem of arr){
-  //   arr.push(arr[arr.length -1]);
-  //   arr.pop();
-  // }
-  // return arr;
-  let newArray =[];
-  for(arrItem of arr){
-    newArray.unshift(arrItem);
+  const length = arr.length;
+  let n =0;
+  for(let i = 0; i < length; i++){
+    arr.unshift("");
   }
-  return newArray;
+  for(arrItem of arr){
+      arr[n]=arr[arr.length -1];
+      arr.pop();
+      n++;
+  }
+  return arr;  
 }
 
 

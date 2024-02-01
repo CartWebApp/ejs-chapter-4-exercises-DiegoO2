@@ -1,9 +1,18 @@
 function arrayToList(arr) {
-  // Add code.
+  let list={};
+  for (let i = arr.length-1; i >= 0; i--) {
+    console.log("cats");
+    if (i == arr.length-1) {
+      list = {value: arr[i], rest: null};
+    }
+    else{
+      list = {value: arr[i], rest: list};
+    }
+  }
+  return list;
 }
-
 function listToArray(list, arr) {
-  // Add code.
+  
 }
 
 // tests

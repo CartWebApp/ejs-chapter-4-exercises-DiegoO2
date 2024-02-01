@@ -9,7 +9,6 @@ function range(start, end, step = 1) {
     for(i = start; i >= end; i--){
       list.push(i);
     }
-    console.log("cats")
   }
   else [
     console.log("Use a valid third number")

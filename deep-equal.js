@@ -1,7 +1,4 @@
 function deepEqual(value, reference) {
-  // console.log(Object.keys(value));
-  // console.log(Object.keys(reference));
-
   if ((typeof value == "object" && value != null) && (typeof reference == "object" && reference != null)) {
     if (value.length == reference.length) {
       let string1 = "";
@@ -19,23 +16,18 @@ function deepEqual(value, reference) {
           string3 = string3+String(value);
         }
         for(key of Object.values(reference)){
-          string4 = string4+String(reference);
+          string4 = string4+String(key);
         }
-  
         if(string3 == string4){
           return true;
         }
+        else {
+          return false;
+        }
       }
-
-
-      // if((Object.keys(value) == Object.keys(reference))){
-      //   if(Object.values(value) == Object.values(reference)){
-      //     return true;
-      //   }
-      // }
-      // else {
-      //   return false;
-      // }
+      else {
+        return false;
+      }
     }
     else {
       return false;
@@ -48,10 +40,6 @@ function deepEqual(value, reference) {
     return false;
   }
 }
-
-
-
-
 
 // tests
 let obj = { here: { is: "an" }, object: 2 };

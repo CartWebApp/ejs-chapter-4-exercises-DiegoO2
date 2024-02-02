@@ -1,7 +1,6 @@
 function arrayToList(arr) {
   let list={};
   for (let i = arr.length-1; i >= 0; i--) {
-    console.log("cats");
     if (i == arr.length-1) {
       list = {value: arr[i], rest: null};
     }
@@ -12,7 +11,22 @@ function arrayToList(arr) {
   return list;
 }
 function listToArray(list, arr) {
-  
+  let newArray=[];
+  for (let node = list; node; node = node.rest) {
+    newArray.push(node.value)
+  }
+  return newArray;
+}
+function prepend (obj1st, obj2nd){
+  let list = {value: obj1st, rest: obj2nd};
+  return list;
+}
+function nth(list, index){
+  let newArray=[];
+  for (let node = list; node; node = node.rest) {
+    newArray.push(node.value)
+  }
+  return newArray[index];
 }
 
 // tests
